@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e4ff; 
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro de .logo */
+}
+
+.app-title {
+    color: #05162c;
+    font-size: 24px; /* Tamaño adecuado para el título */
+    margin-left: 10px; /* Espacio entre el logo y el título */
+}
+
+.search-container {
+    margin-left: auto; /* Alinea el contenedor de búsqueda a la derecha */
+    margin-right: 20px; /* Espacio entre el contenedor de búsqueda y el botón de cerrar sesión */
+}
+
+.logout {
+    margin-left: 20px; /* Espacio entre el botón de cerrar sesión y el contenedor de búsqueda */
+}
+
+.logo img {
+    max-height: 75px; 
+    width: auto; 
+}
+
+.logo {
+    margin-left: 20px; 
+}
+
+.logout {
+    margin-right: 50px; /* Espacio a la derecha */
+}
+
+.menu-item {
+    color: #041325;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}    
+  
+.top-bar {
+    background-color: #e8e4ff;
+    color: #ececec;
+    width: 100%; /* Ancho total */
+    height: 70px; /* Altura del top bar */
+    position: fixed; /* Fijamos el top bar en la parte superior */
+    top: 0; /* Lo colocamos en la parte superior */
+    left: 0; /* Lo colocamos al principio */
+    z-index: 1000; /* Aseguramos que esté por encima de otros elementos */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    padding: 0 25px; /* Añadimos espacio interno */
+    justify-content: space-between; /* Distribuimos el espacio entre elementos */
+}
+
+.menu-icon i {
+    color: #05162c;
+    margin-left: 30px; 
+    cursor: pointer; 
+}
+
+.search-container {
+    flex: 1; /* Hace que el contenedor de búsqueda ocupe todo el espacio disponible */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.search-box {
+    position: relative; /* Posiciona relativamente el contenedor de búsqueda */
+    width: 100%; /* Establece el ancho al 100% para que el campo de búsqueda ocupe todo el espacio disponible */
+    max-width: 400px; /* Establece un ancho máximo para el campo de búsqueda */
+}    
+
+.search-input {
+width: 400px; /* Ajusta el ancho según sea necesario */
+padding: 10px 15px; /* Ajusta el espacio interno */
+border-radius: 20px; /* Ajusta el radio de los bordes */
+border: none;
+outline: none;
+background-color: #d1c5ff; /* Color de fondo */
+color: #000000; /* Color del texto */
+transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+padding-left: 40px; /* Ajusta el padding izquierdo para dejar espacio al icono */
+}
+.search-input::placeholder {
+    color: #383838; /* Color del texto del placeholder */
+}
+.search-input:focus {
+    background-color: #ffffff; /* Color de fondo al hacer foco */
+    color: #000000; /* Color del texto al hacer foco */
+}
+.search-icon {
+pointer-events: none; /* Evita que el icono de búsqueda sea interactivo */
+position: absolute; /* Posicionamos absolutamente el icono */
+top: 50%; /* Centrado verticalmente */
+left: 15px; /* Posiciona el icono a la izquierda del texto */
+transform: translateY(-50%); /* Ajuste de centrado vertical */
+color: #05162c; /* Color del icono */
+}
+.navbar {
+    background-color: #e8e4ff;
+    color: #05162c; 
+    width: 260px; 
+    height: 100vh; 
+    padding-top: 20px; /* Espacio para el contenido arriba del navbar */
+    box-shadow: 0 0 10px rgba(81, 87, 114, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Agregamos una transición para suavizar el efecto de ocultar/mostrar el navbar */
+    transform: translateX(0); /* Inicialmente el navbar está visible */
+    position: fixed; /* Fijamos el navbar en la pantalla */
+    top: 70px; /* Lo colocamos debajo del top bar */
+    left: 0; /* Lo colocamos al principio */
+    z-index: 999; /* Aseguramos que esté por debajo del top bar */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+}
+.navbar.hidden {
+    transform: translateX(-300px); /* Ocultamos el navbar moviéndolo fuera de la pantalla */
+}
+.profile {
+    padding: 10px;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+}
+.profile img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 15px; 
+}
+.profile h2 {
+    margin: 0;
+    font-size: 18px; /* Tamaño del texto del nombre */
+    text-align: center; 
+}
+.menu {
+    margin-top: 20px; /* Espacio arriba del menú */
+    padding: 0;
+    list-style: none;
+}
+/* Estilos para los botones del menú */
+.navbar .menu-item {
+    padding: 10px 20px; /* Espacio interno del elemento del menú */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+}
+
+.navbar .menu-item:hover {
+    background-color: #becfd1; 
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.navbar .menu-item i {
+    margin-right: 10px; 
+    margin-left: 20px;
+}
+
+.content-container {
+    margin-top: 70px; /* Espacio para el top bar */
+    margin-left: 260px; /* Espacio para el navbar */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out; /* Transición suave para ajustar el margen cuando el navbar se muestra/oculta */
+}
+
+.content-container.full-width {
+    margin-left: 0; /* Ancho completo cuando el navbar está oculto */
+}
+
+.white-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    height: calc(100vh - 70px); /* Ajuste de altura para ocupar todo el espacio restante */
+    padding: 20px;
+    margin-top: -20px; /* Espacio para el top bar */
+}

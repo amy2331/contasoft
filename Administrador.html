@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaria</title>
+    <link href="css/Secretaria.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+
+<body>
+<!-- Top bar -->
+<div class="top-bar">
+    <div class="menu-icon" onclick="toggleNavbar()">
+        <i class="fas fa-bars fa-lg"></i> 
+    </div>
+    <div class="logo">
+        <img src="css/Imágenes/Logo.png" alt="Logo">
+        <h1 class="app-title">ContaSoft</h1>
+    </div>
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Buscar Estudiante...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </div>
+    <div class="logout">
+        <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+    </div>
+</div>
+
+<!-- Navbar -->
+<div class="navbar" id="navbar">
+    <div class="profile">
+        <img src="css/Imágenes/Sesión.jpeg" alt="Profile Picture">
+        <h2>Eimy Vega Riaño</h2> 
+    </div>
+    <ul class="menu">
+        <li class="menu-item"><i class="fas fa-exclamation-circle"></i> Pagos En Mora</li>
+        <li class="menu-item"><i class="fas fa-check-circle"></i> Pagos Al Día</li>
+        <li class="menu-item"><i class="fas fa-user-plus"></i> Registrar Estudiante</li>
+        <li class="menu-item"><i class="fas fa-edit"></i> Editar Datos</li>
+        <li class="menu-item"><i class="fas fa-user-minus"></i> Eliminar Estudiante</li>
+        <li class="menu-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</li>
+    </ul>
+</div>
+
+<!-- Content Container -->
+<div class="content-container" id="content-container">
+    <!-- White Box -->
+    <div class="white-box"></div>
+</div>
+
+<script>
+    function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        var contentContainer = document.getElementById("content-container");
+        navbar.classList.toggle("hidden");
+        contentContainer.classList.toggle("full-width");
+    }
+</script>
+
+</body>
+</html>
